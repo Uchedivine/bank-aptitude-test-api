@@ -6,5 +6,8 @@ use App\Http\Controllers\Api\QuestionController;
 use App\Http\Controllers\testController;
 
 // Public endpoints - no authentication required
-Route::get('/questions', [testController::class, 'index']);
-Route::post('/submit-score', [testController::class, 'submit']);
+Route::get('/questions', [TestController::class, 'index']);
+Route::post('/submit-score', [TestController::class, 'submit']);
+Route::get('/categories', function() {
+    return response()->json(\App\Models\Category::all());
+});
