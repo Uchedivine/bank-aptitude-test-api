@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\QuestionController;
-use App\Http\Controllers\testController;
+use App\Http\Controllers\TestController;
 
 // Public endpoints - no authentication required
 Route::get('/questions', [TestController::class, 'index']);
